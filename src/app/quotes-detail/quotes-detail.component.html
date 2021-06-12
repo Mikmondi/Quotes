@@ -1,1 +1,4 @@
 <p>{{ quote.description }}</p>
+<p>Author:{{quote.author}}</p>
+<p>Published by:{{ quote.publisher }} on  {{quote.completeDate|date:'dd/MM/yyyy'}}</p>
+<button (click)='quoteDelete(true)' id="delete" class="btn btn-danger"><i class="fa fa-trash"></i></button>

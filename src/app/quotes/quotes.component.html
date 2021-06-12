@@ -1,11 +1,16 @@
-<div>
+<div class="container">
     <h1>Inspirational Quotes</h1>
     <hr>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-6">
     <ul>
       <li *ngFor='let quote of quotes; let i = index'>
         {{quote.name}}
         <button (click)='toggleDetails(i)'>Check Details</button>
-        <app-quotes-detail *ngIf='quote.showDescription' [quote] = 'quote'></app-quotes-detail>
+        <app-quotes-detail *ngIf='quote.showDescription' (isComplete)='deleteQuote($event,i)'  [quote] = 'quote'></app-quotes-detail>
       </li>
     </ul>
+        </div>
+    </div>
   </div>
