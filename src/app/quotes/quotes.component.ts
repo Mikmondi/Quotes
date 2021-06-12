@@ -14,6 +14,9 @@ export class QuotesComponent implements OnInit {
     new Quotes(3,"life quote","The road is loang bt we bt can't just stop","calos.com","Don carlos",new Date(2018,7,20),56,0),
     new Quotes(4,'Love quote','One love to dih universe','Tuff Gong','Marley',new Date(2020,1,21),50,0)
   ];
+  toggleDetails(index:any){
+    this.quotes[index].showDescription=!this.quotes[index].showDescription;
+  }
 
   constructor() { }
 
