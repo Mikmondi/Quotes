@@ -9,8 +9,8 @@ import { Quotes } from '../quotes';
 export class QuotesComponent implements OnInit {
 
   quotes:Quotes[]=[
-    new Quotes(1,'The problem with the world is that the intelligent people are full of doubts,while the stupid ones are full of confidence.','Anyone who has never made a mistake has never tried anything new',"","Michael Oduor",new Date(2020,3,25),20,0),
-    new Quotes(2,'Rasta quote',"Eat with the devil bt use a long spoon",'positive vibe.com','Yahi bu',new Date(2019,4,6),50,0),
+    new Quotes(1,'The problem with the world is that the intelligent people are full of doubts,while the stupid ones are full of confidence.','Anyone who has never made a mistake has never tried anything new',"","Michael Oduor",new Date(2021,4,15),20,0),
+    new Quotes(2,'Rasta quote',"Eat with the devil bt use a long spoon",'positive vibe.com','Yahi bu',new Date(2021,4,21),50,0),
     
   ];
   toggleDetails(index:any){
