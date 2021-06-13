@@ -9,7 +9,7 @@
             <div class="all-card">
       <div *ngFor='let quote of quotes; let i = index' class="card-body all">
           <div>
-        <h4>{{quote.name}}</h4>
+        <h4 id={{i}} appHighlight>{{quote.name}}</h4>
         <button class="btn btn-outline-success" (click)='toggleDetails(i)'>Check Quote Details</button>
           </div>
           <div *ngIf='quote.showDescription'>
