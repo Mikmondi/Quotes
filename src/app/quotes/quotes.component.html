@@ -1,13 +1,13 @@
-<div class="container">
-    <h1>Inspirational Quotes</h1>
+<div class="container-fluid">
+    <h1 class="title">Modern & Classic Quotes </h1>
     <hr>
     <div class="row">
         <div class="col-md-4">
             <app-quotes-form (addQuote)='addNewQuote($event)'></app-quotes-form>
         </div>
         <div class="col-md-6">
-    
-      <div *ngFor='let quote of quotes; let i = index'>
+            <div class="all-card">
+      <div *ngFor='let quote of quotes; let i = index' class="card-body all">
           <div>
         <h4>{{quote.name}}</h4>
         <button (click)='toggleDetails(i)'>Check Quote Details</button>
@@ -15,6 +15,7 @@
           <div *ngIf='quote.showDescription'>
         <app-quotes-detail  (isComplete)='deleteQuote($event,i)'  [quote] = 'quote'></app-quotes-detail>
           </div>
+      </div>
       </div>
     
         </div>

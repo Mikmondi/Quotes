@@ -1,3 +1,4 @@
+<div class="container intern">
 <h5>{{ quote.description }}</h5>
 <p>Author:{{quote.author}}</p>
 <p>Published by:{{ quote.publisher }} on  {{quote.completeDate|date:'dd/MM/yyyy'}}</p>
@@ -9,3 +10,4 @@
 <button class="btn btn-secondary" id="dislike" (click)='dislikebuttonclick()'>{{quote.numberOfdislikes}}<i
     class="miss"></i></button></div>
 <button (click)='quoteDelete(true)' id="delete" class="btn btn-danger"><i class="fa fa-trash"></i>Delete Quote</button>
+</div>
