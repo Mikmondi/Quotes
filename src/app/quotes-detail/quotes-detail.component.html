@@ -1,5 +1,11 @@
-<p>{{ quote.description }}</p>
+<h5>{{ quote.description }}</h5>
 <p>Author:{{quote.author}}</p>
 <p>Published by:{{ quote.publisher }} on  {{quote.completeDate|date:'dd/MM/yyyy'}}</p>
 <p>Posted:{{quote.completeDate|dateCount}}days ago</p>
+<div>Likes<button class="btn btn-success" id="like" (click)='likebuttonclick()'>{{quote.numberOflikes}}<i
+    class="hit"></i></button></div>
+<div>
+    Dislikes
+<button class="btn btn-secondary" id="dislike" (click)='dislikebuttonclick()'>{{quote.numberOfdislikes}}<i
+    class="miss"></i></button></div>
 <button (click)='quoteDelete(true)' id="delete" class="btn btn-danger"><i class="fa fa-trash"></i>Delete Quote</button>

@@ -14,6 +14,18 @@ export class QuotesDetailComponent implements OnInit {
   quoteDelete(complete:boolean){
     this.isComplete.emit(complete)
   }
+  numberOflikes=0;
+  numberOfdislike=0
+  
+
+  likebuttonclick(){
+    this.quote.numberOflikes ++;
+  }
+  dislikebuttonclick() {
+    this.quote.numberOfdislikes++;
+  }
+  
+  
   constructor() { }
 
   ngOnInit(): void {

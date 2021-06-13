@@ -9,8 +9,8 @@ import { Quotes } from '../quotes';
 export class QuotesComponent implements OnInit {
 
   quotes:Quotes[]=[
-    new Quotes(1,'The problem with the world is that the intelligent people are full of doubts,while the stupid ones are full of confidence.','Anyone who has never made a mistake has never tried anything new',"","Michael Oduor",new Date(2021,4,15),20,0),
-    new Quotes(2,'Rasta quote',"Eat with the devil bt use a long spoon",'positive vibe.com','Yahi bu',new Date(2021,4,21),50,0),
+    new Quotes(1,'Inspirational','The problem with the world is that the intelligent people are full of doubts,while the stupid ones are full of confidence.',"Charles Bukowski","Michael Oduor",new Date(2021,4,15),0,0),
+    new Quotes(2,'Motivational','Hard times create strong men,strong men create good times,good times create weak men,and weak men create hard times.','Michael hopf','Michael Oduor',new Date(2021,4,21),0,0),
     
   ];
   toggleDetails(index:any){
@@ -21,7 +21,14 @@ export class QuotesComponent implements OnInit {
       this.quotes.splice(index,1)
     
      }
- }
+  }
+  
+  addNewQuote(quote:any){
+    let quotelength=this.quotes.length;
+    quote.id=quotelength+1;
+    quote.completeDate=new Date(quote.completeDate)
+    this.quotes.push(quote)
+  }
 
   constructor() { }
 

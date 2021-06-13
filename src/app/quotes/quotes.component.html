@@ -2,15 +2,21 @@
     <h1>Inspirational Quotes</h1>
     <hr>
     <div class="row">
-        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <app-quotes-form (addQuote)='addNewQuote($event)'></app-quotes-form>
+        </div>
         <div class="col-md-6">
-    <ul>
-      <li *ngFor='let quote of quotes; let i = index'>
-        {{quote.name}}
-        <button (click)='toggleDetails(i)'>Check Details</button>
-        <app-quotes-detail *ngIf='quote.showDescription' (isComplete)='deleteQuote($event,i)'  [quote] = 'quote'></app-quotes-detail>
-      </li>
-    </ul>
+    
+      <div *ngFor='let quote of quotes; let i = index'>
+          <div>
+        <h4>{{quote.name}}</h4>
+        <button (click)='toggleDetails(i)'>Check Quote Details</button>
+          </div>
+          <div *ngIf='quote.showDescription'>
+        <app-quotes-detail  (isComplete)='deleteQuote($event,i)'  [quote] = 'quote'></app-quotes-detail>
+          </div>
+      </div>
+    
         </div>
     </div>
   </div>
