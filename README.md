@@ -1,4 +1,19 @@
 # Quotes
+## Quote Site App
+
+This App allows users to view Quotes added by other users and their Authors.They can be able to add their own Quotes and also vote for the Quotes they like.
+
+## Author
+Michael Oduor
+
+## Technology Used
+
+Angular.js
+Bootstrap
+HTML
+CSS
+GIT
+Github
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.0.
 
